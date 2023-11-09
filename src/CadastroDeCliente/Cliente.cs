@@ -13,5 +13,6 @@ namespace CadastroDeCliente
         public string Sobrenome { get; set; }
         public string Cpf {  get; set; }
         public DateTime Nascimento { get; set; }
+        public double Peso { get; set; }
     }
 }
