@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridViewListaClientes = new System.Windows.Forms.DataGridView();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,14 +41,18 @@
             this.botaoSalvar = new System.Windows.Forms.Button();
             this.botaoCancelar = new System.Windows.Forms.Button();
             this.dateTimePickerNascimento = new System.Windows.Forms.DateTimePicker();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sobrenomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxPeso = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewListaClientes
@@ -58,17 +63,18 @@
             this.dataGridViewListaClientes.AutoGenerateColumns = false;
             this.dataGridViewListaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nomeDataGridViewTextBoxColumn,
-            this.sobrenomeDataGridViewTextBoxColumn,
-            this.cpfDataGridViewTextBoxColumn,
-            this.nascimentoDataGridViewTextBoxColumn});
-            this.dataGridViewListaClientes.DataSource = this.clienteBindingSource;
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.pesoDataGridViewTextBoxColumn});
+            this.dataGridViewListaClientes.DataSource = this.clienteBindingSource1;
             this.dataGridViewListaClientes.Location = new System.Drawing.Point(4, 0);
             this.dataGridViewListaClientes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridViewListaClientes.Name = "dataGridViewListaClientes";
             this.dataGridViewListaClientes.ReadOnly = true;
-            this.dataGridViewListaClientes.Size = new System.Drawing.Size(514, 246);
+            this.dataGridViewListaClientes.Size = new System.Drawing.Size(641, 246);
             this.dataGridViewListaClientes.TabIndex = 16;
             this.dataGridViewListaClientes.TabStop = false;
             // 
@@ -77,7 +83,7 @@
             this.textBoxNome.Location = new System.Drawing.Point(13, 282);
             this.textBoxNome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(283, 23);
+            this.textBoxNome.Size = new System.Drawing.Size(355, 23);
             this.textBoxNome.TabIndex = 0;
             // 
             // label1
@@ -106,7 +112,7 @@
             this.maskedTextBoxCpf.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.maskedTextBoxCpf.Mask = "000,000,000-00";
             this.maskedTextBoxCpf.Name = "maskedTextBoxCpf";
-            this.maskedTextBoxCpf.Size = new System.Drawing.Size(109, 23);
+            this.maskedTextBoxCpf.Size = new System.Drawing.Size(108, 23);
             this.maskedTextBoxCpf.TabIndex = 2;
             // 
             // label3
@@ -124,13 +130,13 @@
             this.textBoxSobrenome.Location = new System.Drawing.Point(13, 332);
             this.textBoxSobrenome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxSobrenome.Name = "textBoxSobrenome";
-            this.textBoxSobrenome.Size = new System.Drawing.Size(283, 23);
+            this.textBoxSobrenome.Size = new System.Drawing.Size(355, 23);
             this.textBoxSobrenome.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(185, 363);
+            this.label4.Location = new System.Drawing.Point(149, 363);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 15);
@@ -139,7 +145,7 @@
             // 
             // botaoSalvar
             // 
-            this.botaoSalvar.Location = new System.Drawing.Point(332, 351);
+            this.botaoSalvar.Location = new System.Drawing.Point(437, 351);
             this.botaoSalvar.Name = "botaoSalvar";
             this.botaoSalvar.Size = new System.Drawing.Size(155, 39);
             this.botaoSalvar.TabIndex = 10;
@@ -149,7 +155,7 @@
             // 
             // botaoCancelar
             // 
-            this.botaoCancelar.Location = new System.Drawing.Point(332, 290);
+            this.botaoCancelar.Location = new System.Drawing.Point(437, 290);
             this.botaoCancelar.Name = "botaoCancelar";
             this.botaoCancelar.Size = new System.Drawing.Size(155, 39);
             this.botaoCancelar.TabIndex = 11;
@@ -160,59 +166,82 @@
             // 
             this.dateTimePickerNascimento.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerNascimento.Location = new System.Drawing.Point(188, 381);
+            this.dateTimePickerNascimento.Location = new System.Drawing.Point(152, 381);
             this.dateTimePickerNascimento.Name = "dateTimePickerNascimento";
             this.dateTimePickerNascimento.Size = new System.Drawing.Size(108, 23);
             this.dateTimePickerNascimento.TabIndex = 3;
             this.dateTimePickerNascimento.Value = new System.DateTime(2023, 11, 7, 11, 13, 24, 0);
             // 
-            // idDataGridViewTextBoxColumn
+            // textBoxPeso
             // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 46;
+            this.textBoxPeso.Location = new System.Drawing.Point(293, 381);
+            this.textBoxPeso.Name = "textBoxPeso";
+            this.textBoxPeso.Size = new System.Drawing.Size(75, 23);
+            this.textBoxPeso.TabIndex = 17;
             // 
-            // nomeDataGridViewTextBoxColumn
+            // label5
             // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(290, 363);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 15);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Peso:";
             // 
-            // sobrenomeDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.sobrenomeDataGridViewTextBoxColumn.DataPropertyName = "Sobrenome";
-            this.sobrenomeDataGridViewTextBoxColumn.HeaderText = "Sobrenome";
-            this.sobrenomeDataGridViewTextBoxColumn.Name = "sobrenomeDataGridViewTextBoxColumn";
-            this.sobrenomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // cpfDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.cpfDataGridViewTextBoxColumn.DataPropertyName = "Cpf";
-            this.cpfDataGridViewTextBoxColumn.HeaderText = "CPF";
-            this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
-            this.cpfDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cpfDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // nascimentoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.nascimentoDataGridViewTextBoxColumn.DataPropertyName = "Nascimento";
-            this.nascimentoDataGridViewTextBoxColumn.HeaderText = "Nascimento";
-            this.nascimentoDataGridViewTextBoxColumn.Name = "nascimentoDataGridViewTextBoxColumn";
-            this.nascimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Sobrenome";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Sobrenome";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // clienteBindingSource
+            // dataGridViewTextBoxColumn4
             // 
-            this.clienteBindingSource.DataSource = typeof(CadastroDeCliente.Cliente);
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cpf";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Cpf";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Nascimento";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Nascimento";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // pesoDataGridViewTextBoxColumn
+            // 
+            this.pesoDataGridViewTextBoxColumn.DataPropertyName = "Peso";
+            this.pesoDataGridViewTextBoxColumn.HeaderText = "Peso";
+            this.pesoDataGridViewTextBoxColumn.Name = "pesoDataGridViewTextBoxColumn";
+            this.pesoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clienteBindingSource1
+            // 
+            this.clienteBindingSource1.DataSource = typeof(CadastroDeCliente.Cliente);
             // 
             // TelaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 429);
+            this.ClientSize = new System.Drawing.Size(649, 429);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBoxPeso);
             this.Controls.Add(this.dateTimePickerNascimento);
             this.Controls.Add(this.botaoCancelar);
             this.Controls.Add(this.botaoSalvar);
@@ -231,6 +260,7 @@
             this.Load += new System.EventHandler(this.TelaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,6 +285,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sobrenomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nascimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBoxPeso;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pesoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource clienteBindingSource1;
     }
 }
 

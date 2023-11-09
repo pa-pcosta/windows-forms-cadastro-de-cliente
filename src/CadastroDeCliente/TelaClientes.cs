@@ -33,7 +33,8 @@ namespace CadastroDeCliente
                 Nome = textBoxNome.Text,
                 Sobrenome = textBoxSobrenome.Text,
                 Cpf = maskedTextBoxCpf.Text,
-                Nascimento = dateTimePickerNascimento.Value
+                Nascimento = dateTimePickerNascimento.Value,
+                Peso = Convert.ToDouble(textBoxPeso.Text)
             };
 
             //Adiciona objeto à lista de clientes
@@ -52,6 +53,8 @@ namespace CadastroDeCliente
             textBoxSobrenome.Text = string.Empty;
             maskedTextBoxCpf.Text = string.Empty;
             dateTimePickerNascimento.Value = DateTime.Today;
+            textBoxPeso.Text = string.Empty;
+            textBoxPeso.Text += string.Empty;
         }
 
         private int GeraId()
@@ -63,5 +66,6 @@ namespace CadastroDeCliente
         {
 
         }
+
     }
 }
