@@ -30,6 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridViewListaClientes = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,16 +50,9 @@
             this.dateTimePickerNascimento = new System.Windows.Forms.DateTimePicker();
             this.textBoxPeso = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewListaClientes
@@ -77,6 +77,52 @@
             this.dataGridViewListaClientes.Size = new System.Drawing.Size(641, 246);
             this.dataGridViewListaClientes.TabIndex = 16;
             this.dataGridViewListaClientes.TabStop = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Sobrenome";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Sobrenome";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cpf";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Cpf";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Nascimento";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Nascimento";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // pesoDataGridViewTextBoxColumn
+            // 
+            this.pesoDataGridViewTextBoxColumn.DataPropertyName = "Peso";
+            this.pesoDataGridViewTextBoxColumn.HeaderText = "Peso";
+            this.pesoDataGridViewTextBoxColumn.Name = "pesoDataGridViewTextBoxColumn";
+            this.pesoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clienteBindingSource1
+            // 
+            this.clienteBindingSource1.DataSource = typeof(CadastroDeCliente.Cliente);
             // 
             // textBoxNome
             // 
@@ -189,52 +235,6 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Peso:";
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Sobrenome";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Sobrenome";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Cpf";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Cpf";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Nascimento";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Nascimento";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // pesoDataGridViewTextBoxColumn
-            // 
-            this.pesoDataGridViewTextBoxColumn.DataPropertyName = "Peso";
-            this.pesoDataGridViewTextBoxColumn.HeaderText = "Peso";
-            this.pesoDataGridViewTextBoxColumn.Name = "pesoDataGridViewTextBoxColumn";
-            this.pesoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // clienteBindingSource1
-            // 
-            this.clienteBindingSource1.DataSource = typeof(CadastroDeCliente.Cliente);
-            // 
             // TelaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -259,8 +259,8 @@
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.TelaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

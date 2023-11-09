@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,22 +27,35 @@ namespace CadastroDeCliente
 
         private void AoClicarEmSalvar(object sender, EventArgs e)
         {
-            //Cria objeto do tipo Cliente com base nos valores preenchidos nos campos
-            Cliente novoCliente = new Cliente()
+                //Cria objeto do tipo Cliente com base nos valores preenchidos nos campos
+                Cliente novoCliente = new Cliente()
+                {
+                    Id = GeraId(),
+                    Nome = textBoxNome.Text,
+                    Sobrenome = textBoxSobrenome.Text,
+                    Cpf = maskedTextBoxCpf.Text,
+                    Nascimento = dateTimePickerNascimento.Value,
+                    Peso = Convert.ToDouble(textBoxPeso.Text)
+                };
+
+                //Adiciona objeto à lista de clientes
+                _listaClientes.Add(novoCliente);
+
+                //Refresh dataGridViewClientes e reseta campos
+                ReiniciaCampos();
+            try
             {
-                Id = GeraId(),
-                Nome = textBoxNome.Text,
-                Sobrenome = textBoxSobrenome.Text,
-                Cpf = maskedTextBoxCpf.Text,
-                Nascimento = dateTimePickerNascimento.Value,
-                Peso = Convert.ToDouble(textBoxPeso.Text)
-            };
+                string _padraoNome = "^[a-zA-Z]+$";
 
-            //Adiciona objeto à lista de clientes
-            _listaClientes.Add(novoCliente);
-
-            //Refresh dataGridViewClientes e reseta campos
-            ReiniciaCampos();
+                if(!Regex.IsMatch(novoCliente.Nome, _padraoNome))
+                {
+                    throw new Exception("Formato");
+                };
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ReiniciaCampos()
