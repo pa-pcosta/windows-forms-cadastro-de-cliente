@@ -29,6 +29,7 @@ namespace CadastroDeCliente
 
             dataGridViewListaClientes.DataSource = _listaClientes;
             dataGridViewListaClientes.MultiSelect = false;
+            dataGridViewListaClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void InitializeMaskedTextedBox(MaskedTextBox maskedTextBox)
