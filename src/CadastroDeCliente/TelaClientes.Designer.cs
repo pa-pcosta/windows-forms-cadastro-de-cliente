@@ -77,6 +77,7 @@
             this.dataGridViewListaClientes.Size = new System.Drawing.Size(641, 246);
             this.dataGridViewListaClientes.TabIndex = 16;
             this.dataGridViewListaClientes.TabStop = false;
+            this.dataGridViewListaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewListaClientes_CellContentClick);
             // 
             // textBoxNome
             // 

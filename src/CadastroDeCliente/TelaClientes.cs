@@ -17,6 +17,18 @@ namespace CadastroDeCliente
         public TelaClientes()
         {
             InitializeComponent();
+            InicializarCampos();
+        }
+
+        private void InicializarCampos()
+        {
+            //Inicializa lista
+            _listaClientes.Add(new Cliente() { Id = 0, Nome = "Usuario_Teste_1", Sobrenome = "Usuario_Teste_1", Cpf = "111.111.111-11", Nascimento = new DateTime(2000,01,02), Peso = 50.00});
+            _listaClientes.Add(new Cliente() { Id = 0, Nome = "Usuario_Teste_2", Sobrenome = "Usuario_Teste_2", Cpf = "222.222.222-22", Nascimento = new DateTime(2000, 03, 04), Peso = 50.00 });
+            _listaClientes.Add(new Cliente() { Id = 0, Nome = "Usuario_Teste_3", Sobrenome = "Usuario_Teste_3", Cpf = "333.333.333-33", Nascimento = new DateTime(2000, 05, 06), Peso = 50.00 });
+
+            dataGridViewListaClientes.DataSource = _listaClientes;
+            dataGridViewListaClientes.MultiSelect = false;
         }
 
         private void InitializeMaskedTextedBox(MaskedTextBox maskedTextBox)
@@ -67,5 +79,9 @@ namespace CadastroDeCliente
 
         }
 
+        private void dataGridViewListaClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }
